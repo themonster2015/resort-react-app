@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+You can view the live version at [Resort React App](https://quizzical-nobel-c9034f.netlify.com/)
+
 ## Available Scripts
 
 In the project directory, you can run:
