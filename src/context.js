@@ -51,12 +51,40 @@ class RoomProvider extends Component {
     const room = tempRooms.find(room => room.slug === slug);
     return room;
   };
+  handleChange = event => {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+    console.log(value + name);
+    this.setState(
+      {
+        [name]: value
+      },
+      this.filterRooms()
+    );
+  };
+
+  filterRooms = () => {
+    let { rooms, type, capacity, price } = this.state;
+    let temp = [...rooms];
+    if (type !== "all") {
+      temp = temp.filter(room => room.type === type);
+    }
+    if (capacity !== 1) {
+      temp = temp.filter(room => room.capacity >= capacity);
+    }
+    this.setState({
+      sortedRooms: temp
+    });
+    console.log("sortedroom in context:" + this.state.sortedRooms);
+  };
   render() {
     return (
       <RoomContext.Provider
         value={{
           ...this.state,
-          getRoom: this.getRoom
+          getRoom: this.getRoom,
+          handleChange: this.handleChange
         }}
       >
         {this.props.children}

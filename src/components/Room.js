@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import defaultImg from "../images/room-1.jpeg";
-
 class Room extends Component {
   render() {
     let { name, slug, images, price } = this.props.room;
