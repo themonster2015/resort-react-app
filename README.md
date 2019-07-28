@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -70,4 +69,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 =======
 # resort-react-app
 A Resort Hotel App Built with React
->>>>>>> f3888b7202ee673753cc7e29d4d4761c9ee90427
